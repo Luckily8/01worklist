@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"测试切换用户流程","15411","test_change_user[17718846133]","testcase","Tue Jul 15 17:49:11 CST 2025","passed","Tue Jul 15 17:49:26 CST 2025","","test_change_user","",""
+"测试切换用户流程","15984","test_change_user[13726927260]","testcase","Thu Jul 17 18:07:25 CST 2025","passed","Thu Jul 17 18:07:41 CST 2025","","test_change_user","",""
+"模拟手机号登录流程","10109","test_login_with_mobile_and_sms[19812056630]","testcase","Thu Jul 17 18:07:15 CST 2025","passed","Thu Jul 17 18:07:25 CST 2025","","test_login","",""

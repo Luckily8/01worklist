@@ -1,0 +1,32 @@
+# 测试数据
+normal_account1: # 普通账号
+  username: "八酱30"
+  mobile: "19812056630" 
+  password: "01ai@12345678"  
+  sms_code: "9999"  
+normal_account2: # 普通账号
+  username: "八江"
+  mobile: "17718846133"
+  password: "01ai@12345678"
+  sms_code: "9999"
+companion_account1: # 陪玩账号
+  username: "陪玩账号"
+  mobile: "13726927260"
+  password: "01ai@12345678"
+  sms_code: "9999"
+# 日志配置
+logging:
+  level: "DEBUG"
+  file: "appium_test.log"
+# 测试用例
+test_cases:
+  - id: "TC001"
+    description: "登录测试"
+    steps:
+      - action: "打开应用"
+        expected: "应用成功启动"
+      - action: "输入用户名和密码"
+        expected: "登录成功"
+      - action: "验证首页元素"
+        expected: "首页元素显示正确"
+

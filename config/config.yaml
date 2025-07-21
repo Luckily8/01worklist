@@ -1,0 +1,14 @@
+# This file is part of the Upup project.
+# 配置文件用于设置Appium的连接参数和测试环境。
+platformName: Android
+appium:platformVersion: "15"
+appium:deviceName: AN5H6R4305000757
+appium:appPackage: com.mix.upup
+appium:appActivity: com.mix.upup.start.StartActivity
+appium:automationName: UiAutomator2
+appium:ensureWebviewsHavePages: true
+appium:nativeWebScreenshot: true
+appium:newCommandTimeout: 3600
+appium:connectHardwareKeyboard: true
+appium:noReset: true
+appium:dontStopAppOnReset: true
