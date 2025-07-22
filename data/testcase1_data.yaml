@@ -11,7 +11,7 @@ normal_account2: # 普通账号
   sms_code: "9999"
 companion_account1: # 陪玩账号
   username: "陪玩账号"
-  mobile: "13726927260"
+  mobile: "13726927259"
   password: "01ai@12345678"
   sms_code: "9999"
 # 日志配置

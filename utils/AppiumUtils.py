@@ -25,6 +25,7 @@ options.load_capabilities(config)
 driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
 # 初始化请求处理器
 class AppiumUtils:
+	driver = driver  # 设置为类属性，供全局调用
 	@staticmethod
 	def wait_and_log_then_click(value, by=AppiumBy.ID, timeout=15, log_msg=None):
 		global driver
@@ -71,7 +72,7 @@ class AppiumUtils:
 			actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
 			actions.w3c_actions.pointer_action.move_to_location(845, 2242)
 			actions.w3c_actions.pointer_action.pointer_down()
-			actions.w3c_actions.pointer_action.pause(0.05)  # 缩短模拟点击间隔
+			actions.w3c_actions.pointer_action.pause(0.09)  # 缩短模拟点击间隔
 			actions.w3c_actions.pointer_action.release()
 			actions.perform()
 			

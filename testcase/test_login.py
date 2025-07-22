@@ -7,7 +7,7 @@ from utils.AppiumUtils import AppiumUtils as AU
 from utils import load_yaml
 
 data_file = "data/testcase1_data.yaml" # 测试数据文件路径
-data_index = "normal_account2"  # 使用哪一组账号数据
+data_index = "companion_account1"  # 使用哪一组账号数据
 
 # (可选)导入相关数据
 test_data = load_yaml(data_file)
