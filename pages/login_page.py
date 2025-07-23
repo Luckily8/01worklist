@@ -24,10 +24,6 @@ class LoginPage:
         AU.wait_and_log_then_click("com.mix.upup:id/dialog_alert_two_confirm")
 
     @handle_exceptions
-    def click_code_input(self):
-        AU.wait_and_log_then_click("com.mix.upup:id/tvLoginOrRegister")
-
-    @handle_exceptions
     def input_sms_code(self, code_func):
         code_func()  # 传入验证码输入方法
 
@@ -41,10 +37,8 @@ class LoginPage:
         self.input_phone(phone)
         self.click_login_or_register()
         self.click_alert_confirm()
-        self.click_code_input()
-        self.click_next()
+        self.click_login_or_register()
         code_func()
-        self.click_next()
 
     @handle_exceptions
     def assert_mine_page(self):

@@ -8,6 +8,7 @@ from utils import load_yaml
 from pages.login_page import LoginPage
 
 data_file = "data/testcase1_data.yaml"
+# data_index = "normal_account1"
 data_index = "companion_account1"
 test_data = load_yaml(data_file)
 mobile = test_data[data_index].get("mobile", "17718846133")
