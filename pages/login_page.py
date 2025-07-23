@@ -1,30 +1,31 @@
 
 from appium.webdriver.common.appiumby import AppiumBy
 from utils.exception_handler import handle_exceptions
-
+from utils.AppiumUtils import AppiumUtils as AU
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
 
     @handle_exceptions
-    def click_phone_login(self):
-        self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/cvPhoneLogin").click()
+    def click_phone_login(self): 
+        AU.wait_and_log_then_click("com.mix.upup:id/cvPhoneLogin")
 
     @handle_exceptions
     def input_phone(self, phone):
-        self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/etPhone").send_keys(phone)
+        el = AU.wait_and_log("com.mix.upup:id/etPhone")
+        el.send_keys(phone)
 
     @handle_exceptions
     def click_login_or_register(self):
-        self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/tvLoginOrRegister").click()
+        AU.wait_and_log_then_click("com.mix.upup:id/tvLoginOrRegister")
 
     @handle_exceptions
     def click_alert_confirm(self):
-        self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/dialog_alert_two_confirm").click()
+        AU.wait_and_log_then_click("com.mix.upup:id/dialog_alert_two_confirm")
 
     @handle_exceptions
     def click_code_input(self):
-        self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/tvLoginOrRegister").click()
+        AU.wait_and_log_then_click("com.mix.upup:id/tvLoginOrRegister")
 
     @handle_exceptions
     def input_sms_code(self, code_func):
@@ -32,7 +33,7 @@ class LoginPage:
 
     @handle_exceptions
     def click_next(self):
-        self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/tvNext").click()
+        AU.wait_and_log_then_click("com.mix.upup:id/tvNext")
 
     @handle_exceptions
     def login_flow(self, phone, code_func):
@@ -47,7 +48,7 @@ class LoginPage:
 
     @handle_exceptions
     def assert_mine_page(self):
-        el = self.driver.find_element(AppiumBy.ID, "com.mix.upup:id/llMine")
+        el = AU.wait_and_log("com.mix.upup:id/llMine")
         assert el is not None, "断言失败：未找到我的页面元素"
         el.click()
         return el

@@ -9,7 +9,7 @@ from pages.mine_page import MinePage
 from pages.login_page import LoginPage
 
 data_file = "data/testcase1_data.yaml"
-data_index = "companion_account1"
+data_index = "companion_account1"  # 使用哪一组账号数据
 test_data = load_yaml(data_file)
 mobile = test_data[data_index].get("mobile", "17718846133")
 
@@ -32,11 +32,9 @@ def test_change_user_pom(mobile):
         login_page.click_alert_confirm()
         login_page.click_login_or_register()
         AU.sms_code_input()
-        login_page.click_next()
         AU.save_screenshot("换号")
         mine_page.assert_mine_page()
     except Exception:
-        AU.save_screenshot("流程中失败")
         pytest.fail("断言失败：未找到我的页面元素")
 
 if __name__ == "__main__":

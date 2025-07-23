@@ -23,7 +23,6 @@ def test_login_with_mobile_and_sms(mobile):
         AU.save_screenshot("登录")
         login_page.assert_mine_page()
     except Exception:
-        AU.save_screenshot("流程失败")
         pytest.fail("断言失败：未找到我的页面元素")
 
 if __name__ == "__main__":
