@@ -9,10 +9,8 @@ from pages.mine_page import MinePage
 from pages.login_page import LoginPage
 
 data_file = "data/testcase1_data.yaml"
-# data_index = "companion_account1"  # 使用哪一组账号数据
-data_index = "normal_account1"
 test_data = load_yaml(data_file)
-mobile = test_data[data_index].get("mobile", "17718846133")
+mobile = "17718846233"
 
 @pytest.mark.order(2)
 @pytest.mark.parametrize("mobile", [mobile])
